@@ -4,17 +4,11 @@
 
 package com.jamesxia4.semriver;
 
-public class SemDAO {
-    private int id;
-    private String topic;
-    private String createTime;
-    private String commentSentence;
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
 
+public class SemDAO {
     public SemDAO(){
-        id=0;
-        topic="";
-        createTime="1970/01/01 00:00:00.0";
-        commentSentence="Error Sentence";
     }
 
     public int getPositiveCount(String dateTimeStart,String dateTimeStop,String inputTopic){
@@ -61,4 +55,5 @@ public class SemDAO {
                 "and sentiment = 0;";
         return 0;
     }
+
 }
